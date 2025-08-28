@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+
+.hero {
+  position: relative;
+  height: 100vh;
+  background: #fff;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+}
+
+.circle {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  background: #ff0000;
+  border-radius: 350px;
+  z-index: 1;
+  right: -303px;
+  bottom: -290px;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 500px;
+}
+
+.content h1 {
+  font-size: 3rem;
+  color: #222;
+}
+
+.content p {
+  margin: 20px 0;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+button {
+  background: #ff0000;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 25px;
+}
+
+.coke-can {
+  position: absolute;
+  right: 1%;
+  bottom: 15%;
+  height: 469px;
+  width: 400px;
+  z-index: 2;
+}
+
+.logo img{
+  height: 100px;
+  width: 100px;
+  
+}
+
+header{
+  top: 20px;
+  left: 50px;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  height: 14vh;
+  background-color: white; 
+  z-index: 1;
+  position: absolute; 
+  gap: 1000px; 
+}
+ 
+header ul{
+  display: flex;
+  gap: 30px; 
+  list-style: none; 
+  padding: 0%; 
+  text-decoration: none;
+  color: #ff0000;
+  margin: 0%; 
+}
+ 
+header ul li a{
+  color: #ff0000; 
+  text-decoration: none;
+  font-weight: 700px;
+}
