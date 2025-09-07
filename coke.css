@@ -7,10 +7,9 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
 }
 
-
+/* Hero Section */
 .hero {
   position: relative;
   height: 100vh;
@@ -23,13 +22,14 @@ body {
 
 .circle {
   position: absolute;
-  width: 700px;
-  height: 700px;
+  width: 500px;
+  height: 500px;
   background: #ff0000;
   border-radius: 350px;
   z-index: 1;
-  right: -303px;
-  bottom: -290px;
+  right: -90px;
+  bottom: -90px;
+
 }
 
 .content {
@@ -74,6 +74,7 @@ button {
   
 }
 
+/* Header Section */
 header{
   top: 20px;
   left: 50px;
@@ -102,3 +103,4 @@ header ul li a{
   text-decoration: none;
   font-weight: 700px;
 }
+/*Menu Section*/
