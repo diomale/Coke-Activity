@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
- 
 }
 
 body {
@@ -14,23 +13,24 @@ body {
   position: relative;
   height: 100vh;
   background: #fff;
-  overflow: visible;
+  overflow: hidden;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 0 10%;
+  flex-wrap: wrap; /* allows better mobile layout */
 }
 
 .circle {
-  display: flex;
   position: absolute;
   width: 500px;
   height: 500px;
   background: #ff0000;
-  border-radius: 350px;
+  border-radius: 50%;
   z-index: 1;
-  right: -90px;
-  bottom: -90px;
-
+  right: 0;
+  bottom: 0;
+  transform: translate(30%, 30%);
 }
 
 .content {
@@ -58,6 +58,11 @@ button {
   font-size: 1rem;
   cursor: pointer;
   border-radius: 25px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #cc0000;
 }
 
 .coke-can {
@@ -69,39 +74,93 @@ button {
   z-index: 2;
 }
 
-.logo img{
+.logo img {
   height: 100px;
   width: 100px;
-  
 }
 
 /* Header Section */
-header{
+header {
   top: 20px;
   left: 50px;
   display: flex;
-  justify-content: space-between; 
-  align-items: center; 
+  justify-content: space-between;
+  align-items: center;
   height: 14vh;
-  background-color: white; 
-  z-index: 1;
-  position: absolute; 
-  gap: 1000px; 
+  background-color: white;
+  z-index: 3;
+  position: absolute;
+  width: 90%;
+  padding: 0 5%;
 }
- 
-header ul{
+
+header ul {
   display: flex;
-  gap: 30px; 
-  list-style: none; 
-  padding: 0%; 
-  text-decoration: none;
+  gap: 30px;
+  list-style: none;
+}
+
+header ul li a {
   color: #ff0000;
-  margin: 0%; 
-}
- 
-header ul li a{
-  color: #ff0000; 
   text-decoration: none;
-  font-weight: 700px;
+  font-weight: 700;
+  transition: color 0.3s ease;
 }
-/*Menu Section*/
+
+header ul li a:hover {
+  color: #cc0000;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .coke-can {
+    height: 350px;
+    width: auto;
+    right: 5%;
+    bottom: 10%;
+  }
+
+  .circle {
+    width: 350px;
+    height: 350px;
+    transform: translate(20%, 20%);
+  }
+
+  .content h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .coke-can {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    margin-top: 20px;
+    height: 250px;
+  }
+
+  .circle {
+    width: 250px;
+    height: 250px;
+    transform: translate(50%, 50%);
+  }
+
+  header {
+    flex-direction: column;
+    gap: 15px;
+    height: auto;
+    padding: 10px 0;
+  }
+}
+/* Menu Section */
